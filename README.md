@@ -1,2 +1,2 @@
 # cpp programing
- 
+Hi there, my name is Bereket Tadiwos. I'm a beginner developer in c++ and i was going through this book called "O'Reilly - Practical C++ Programming" (Btw you can check out the book "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwinyLipx-X8AhVEKuwKHYf1BZsQFnoECAgQAQ&url=https%3A%2F%2Frepo.zenk-security.com%2FProgrammation%2FO%2520Reilly%2520-%2520Practical%2520C%2520Programming%2C%25203rd%2520Edition.pdf&usg=AOvVaw0mHVGDwOyR0LeoOoJ6y6BG") and there are alot of good exercises so i decided to work them and share with other people. This repository is totally dedicated for the execises in the book. Thanks for checking it out if you have any suggestion feel free to tell me "https://t.me/Bekitad". 
