@@ -1,0 +1,437 @@
+﻿1. Write a C++ program that lets a user to enter numbers as long as s/he has entered a 
+positive number. When the user enters a negative number, the program must display
+the prompt that says ‘Now you have entered a negative number’ then after it should be
+terminated.
+           ANSWER
+#include<iostream>
+
+int main()
+     {
+std::string v;
+int n=0;
+std::cout<<"Enter a number -"<<std::endl;
+std::cin>>v;
+for( int i=0; i<v.length();i++){
+    if(isdigit(v[i])==true)
+    n++;
+}
+if(n>0){
+ while(n>0){
+    std::cout<<"Enter a number - " << std::endl;
+    std::cin>>n;
+ }
+ if (n == 0){
+ std::cout<<"The number you entered is zero"<<std::endl;
+}
+
+else if (n<0){
+    std::cout<<"The number you entered is negative"<<std::endl;
+ }
+}
+ else
+ std::cout<<"The value you entered is not a number"<<std::endl;
+
+ return 0;
+}
+
+2. Write a C++ program that displays the upper and the lower cases of each of the Latin
+alphabets as shown in the following example.
+Example:- Aa Bb Cc Dd . . . Zz.
+         ANSWER 
+
+#include<iostream>
+int main()
+{ 
+char i,n;
+
+for(i='A',n='a'; i<='Z',n<='z';i++,n++)
+{
+std::cout<<i<<n<<" ";
+}
+return 0;
+}
+
+3. Write a C++ program that computes and displays the sum, the difference and the
+product of a range of consecutive numbers where the starting and ending numbers of
+the range are to be entered from the keyboard.
+
+           ANSWER
+ using namespace std;
+
+ int main()
+  {
+    int start,end;
+    cout<<"Enter the first number "<<endl;
+    cin>>start;
+    cout<<"Enter the secound number "<<endl;
+    cin>>end;
+    
+    int sum=0 , dif =0 ,prod=0;
+    for(int i=start; i<=end; i++){
+        sum+=i;
+        if ( i==start){
+            dif=start;
+        }
+        else{
+            dif-=i;
+        }
+        prod*=i;
+    } 
+ cout<<"The sum of the range of numbers is "<<sum<<endl<<"The differenc of the range of numbers is "<<dif<<endl<<"The product is "<<prod<<endl;
+ 
+
+    return 0;
+}
+4. Write a C++ program that computes and displays the square root each of the numbers
+entered from the keyboard. Once a number is entered and its square root is displayed,
+the program should only continue repeating the same task if the user is willing to do.
+
+          ANSWER
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+    int main()
+      {
+    char exit;
+    int num;
+
+      do
+       {
+        cout<<"\nENTER NUMBER >> ";
+        cin>>num;
+
+        cout<<"THE SQUARE ROOT OF "<<num<<" IS "<<sqrt(num)<<endl;
+        
+
+        cout<<"DO YOU WANT TO CONTINUE YES/NO (Y/N) ";
+        cin>>exit;
+
+     }
+        while(exit == 'y' || exit == 'Y');
+
+       return 0;
+       }
+
+
+5. Write a C++ program accepts list of marks of students and counts the number of
+students who have scored marks greater than 20 in an exam out of 30. The total number
+of students who took the test is to be entered from the keyboard.
+            ANSWER
+
+      #include <iostream>
+     using namespace std;
+     int main()
+    
+    {
+     int count = 0 , n ;
+     int mark;
+
+    cout << "ENETER NUMBER OF STUDENT >> ";
+    cin>>n;
+
+    for(int i = 0 ; i < n ; i++)
+       {
+        cout<<"ENETER "<<i+1<<" STUDENT MARK OUT OF 30 >> ";
+        cin>> mark;
+
+        if(mark >= 20 && mark <= 30)
+        {
+            count++;
+        }
+        else if(mark < 0 || mark > 30)
+        {
+            cout<<"INVALID MARK!!"<<endl;
+        }
+      }
+cout<<count<<" STUDENT HAS SCORE MORE THAN 20"<<endl;
+
+     return 0;
+       }
+
+6. Write a C++ program that displays the maximum and the minimum of a list of numbers
+entered from the keyboard. Where the size of the list is to be entered from the keyboard.
+
+                 ANSWER
+     #include <iostream>
+
+     using namespace std;
+
+     int main()
+  {
+     int n ,  p , k;
+
+     cout << "HOW MANY NUMBER DO YOU WANT TO COMPARE = ";
+     cin>>n;
+
+     int lists[n] = {};
+
+     cout<<"ENTER "<<n<< " NUMBERS "<<endl;
+
+     for (int i = 0 ; i < n ; i++){
+        cout<<" ]]= ";
+        cin>>lists[i];
+    }
+
+    p = lists[0];
+    k = lists[0];
+    for (int x = 0 ; x < n ; x++){
+        p = max(p , lists[x]);
+        k = min(k , lists[x]);
+
+    }
+
+    cout<<p <<" is maximum "<<endl;
+    cout<<k <<" is minimum "<<endl;
+
+    return 0;
+}
+
+7. Write a C++ program that reverses the digits of a given positive integer number entered
+from the keyboard.
+
+         ANSWER
+
+
+       #include <iostream>
+
+       using namespace std;
+
+       int main()
+    {
+     int num, reversed=0, mod;
+
+     cout<<"Enter number: ";
+     cin>>num;
+
+
+     while(num != 0)
+    {
+        mod = num % 10;
+        reversed = reversed*10+mod;
+        num /=10;
+    }
+    cout<<"Reversed Number: "<<reversed<<endl;
+    return 0;
+}
+
+ 8. Write a C++ program that displays the 10 X 10 multiplication table in a proper output
+format.
+                                                   ANSWER
+
+     #include <iostream>
+
+     using namespace std;
+
+     int main()
+  {
+    for(int i = 0 ; i <= 10 ; i++)
+     {
+        for (int j = 0 ; j <=10 ; j++)
+        {
+            cout<<i<< " *" << j <<" = "<<i*j<<" \t ";
+        }
+        cout<<endl;
+     }
+    system("pause");
+    return 0;
+  }
+
+
+ 9. Write a C++ programs that accept the value of N from the keyboard and generate the
+following patterns . Example:- N=5
+     Answer 
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+int num,r,c,sp;
+cout<<"Enter N= ";
+cin>>num;
+//the upper pyramid 
+for(r=1;r<=num-1;r++)
+// num-1 ( to avoid duplication of the same row
+{
+for(sp=num-r;sp>=1;sp--)
+{
+cout<<" ";
+}
+for(c=num-r+1;c<=num;c++)
+{
+cout<<c;
+}
+for(int n=1,c=num-1;n<r;n++,c--)
+{
+cout<<c;
+}
+cout<<"\n";
+}
+// the lower pyramid 
+for(r=1;r<=num;r++)
+{
+for(sp=r;sp>1;sp--)
+{
+cout<<" ";
+}
+for(c=r;c<=num;c++)
+{
+cout<<c;
+}
+for(c=num-1;c>=r;c--)
+{
+cout<<c;
+}
+cout<<"\n";
+}
+    return 0;
+}
+ 
+ 10. Write a C++ programs that Counts and displays the number of even and odd
+occurrences in a given list of integers.
+
+                         ANSWER
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n , a = 0 , b = 0;
+
+    cout<<"ENTER number =  ";
+    cin>>n;
+
+    int lists[n] = {};
+
+    cout<<"ENETER "<<n<<" NUMBER "<<endl;
+    for (int i = 0 ; i < n ; i++){
+        cout<< " >> ";
+        cin>>lists[i];
+    }
+
+    for(int x = 0 ; x < n ; x++){
+        if(lists[x]%2 == 0) {
+            a++;
+            cout<<lists[x]<< " is even number"<<endl;
+        }
+        else{
+            b++;
+            cout<<lists[x]<<" is odd number"<<endl;
+        }
+    }
+
+    cout<<">>THERE ARE "<<a<<" EVEN NUMBERS "<<endl;
+    cout<<">>THERE ARE " <<b<<" ODD NUMBERS "<<endl;
+
+    return 0;
+}
+
+
+11. Write a C++ program that calculates the age of a given person given the present date
+and date of birth in day, month and year. (Use the Ethiopian calendar).
+
+                                  ANSWER
+
+   
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int cday,cmonth,cyear,bday,bmonth,byear , year,month,day;
+
+    cout <<" AGE CALCULATOR " << endl;
+
+    cout<<" ENTER CURRENT DAy >> " ;
+    cin>>cday;
+    cout<<"ENTER CURRENT MONTH(use 1-12) >> ";
+    cin>>cmonth;
+    cout<<"ENTER CUTTENT YEAR >> ";
+    cin>>cyear;
+
+    cout<<"==================================================="<<endl;
+    cout<<"ENTER BIRTH DAy >> " ;
+    cin>>bday;
+    cout<<"ENTER BIRTH MONTH(use 1-12) >> ";
+    cin>>bmonth;
+    cout<<"ENTER BIRTH YEAR >> ";
+    cin>>byear;
+
+
+    year = cyear-byear;
+    if(cmonth >= bmonth){
+        month = ((12-cmonth)+ bmonth);
+    }
+    else{
+        month = cmonth - bmonth;
+    }
+
+    if(cday > bday){
+        day = abs(bday-cday);
+    }
+    else{
+        day = abs(cday - bday);
+    }
+
+
+
+    cout<<"YOUR AGE IS "<<year <<" YEARS/ "<<month<<" MONTH/ "<<day<<" DAY YEARS OLD. "<<endl;
+
+    return 0;
+}
+
+
+
+
+12. Write a C++ program that read a number n and check whether a digit m is present in
+the number .if so, count how many times it is repeated in the number.
+  
+                                   ANSWER
+
+
+
+     #include <iostream>
+     using namespace std;
+     int main()
+   {
+    int n,m , counter = 0;;
+
+    cout<<"HOW MANY NUMBER YOU WANT TO ENTER >> ";
+    cin>>n;
+
+
+    int lists[n] = {};
+
+    for(int i = 0 ; i < n ; i++){
+        cout<< " >> ";
+        cin>>lists[i];
+    }
+
+
+    cout<<"ENTER A NUMBER YOU WANT TO CHECK IN THE LIST >> ";
+    cin>>m;
+
+    for(int x = 0 ; x < n ; x++){
+        if(lists[x] == m){
+            counter++;
+        }
+    }
+
+    if(counter != 0){
+        cout<<endl;
+        cout<<m<<" EXIST IN THE LIST "<<counter<<" TIMES"<<endl;
+    }
+    else{
+        cout<<endl;
+        cout<<m<<" DOES NOT EXIST IN THE LIST "<<endl;
+    }
+
+
+
+    return 0;
+}

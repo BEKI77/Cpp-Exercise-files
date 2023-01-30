@@ -1,0 +1,68 @@
+VECTORS
+-is a dynamic array that grows in only one direction which is the end.
+example
+vector<int> vec;
+//vec.size()==0
+vec.push_back(4);
+vec.push_back(1);
+vec.push_back(8);
+//now vec contains(4,1,8)
+//vec.size()==3
+
+cout<<vec[2]; // 8 (no range check)
+cout<<vec.at(2); //8 (throw range_errror exception out of range)
+
+the recommended way to transvers is 
+for(vector<int>::iterator itr=vec.begin(); itr!=vec.end(); ++itr){
+    cout<<*itr<<" ";
+}
+it's recommended because it is faster ....
+c++ also provided a new way of transversing 
+for(it:vec){
+    cout<<it<<" ";
+}
+
+vector is a dynamically allocated contiguous array in memory...
+common member fuction of all containers
+vec.empty();
+vec.size();
+vector<int> vec2(vec); //copy constractor
+vec.clear; remove all items in vec
+vec2.swap(vec); //vec2 becomes empty and vec has 3 items;
+
+DEQUE
+it's similar to vector but it can grow at the beginning and also at the end.
+deque<int> deq = {1,2,3};
+deq.push_front(2);
+deq.push_back(3);
+
+LINK
+--double linked list
+
+list<int> mylist={5,2,9};
+mylist.push_back(6); //mylist:{5,2,9,6}
+mylist.push_front(4); //mylist:{4,5,2,9,6}
+
+list<int>::iterator itr=find(mylist.begin(), mylist.end(), 2); itr-> 2 itr points to 2.
+mylist.insert(itr, 8); //mylist: {4,5,8,2,9,6}
+itr++;     //now itr pointes to '9'..
+mylist.erase(itr);  //mylist:{4,5,8,2,6}
+
+properties
+1 fast insert/remove at any place:
+2 slow search
+3 no random access, no[] operator.
+
+a unque member function
+mylist1.splice(itr,mylist2,itr_a,itr_b);
+FORWARD LIST:
+it only have a forward pointer.
+we can only trevers it from beginning to the end.
+
+ARRAY
+ int a[3]={3,4,5};
+a.begin();
+a.end();
+a.size();
+a.swap();
+

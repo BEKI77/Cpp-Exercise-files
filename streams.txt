@@ -1,0 +1,4 @@
+cout: is a globale object of ostream ( typedef basic_ostream <char> ostream)
+<<:is a member function of ostream it has a signiture like this ostream& ostream::operator<< (string v);
+
+what is a stream : serial IO interface to exeternal devices (file,stdin/stdout,network,etc.)

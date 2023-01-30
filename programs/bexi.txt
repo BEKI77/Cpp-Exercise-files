@@ -1,0 +1,3 @@
+hi my name is bereket tadiwos
+i was checking that if you can write text files in vs code i guess this works
+so thanks
